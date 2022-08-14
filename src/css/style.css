@@ -1,0 +1,202 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+
+:root{
+    --header-color:#2A9563;
+}
+
+.main-background{
+background:url("/src/files/background.png") ;
+background-position: center;
+background-size: cover;
+width: 2446px;
+height:1032px ;
+}
+
+.main-page-search-container{
+    margin-top:275px;
+}
+
+.container-fluid .main-searchbar{
+    padding: 15px 15px 15px 50px;
+    border-radius: 60px;
+    width: 40vw;
+    height: auto;
+    background-color: #101010;
+    color:white;
+    border:none;
+    font-size: 15px;
+}
+
+input::placeholder{
+    color:white;
+}
+
+input:focus{    
+    outline: none;
+}
+
+
+header{
+    position: fixed;
+    top:10;
+    left:20;
+    z-index: 111;
+    font-size: 20;
+    font-weight: bolder;
+    color:white;
+}
+
+.clr-1{
+    color:rgb(0, 182, 0);
+}
+
+nav{
+    position:fixed;
+    width: 100%;
+    background-color: white;
+    height: 50px;
+    transition: .6s;
+}
+
+.bi-search-main{
+    position:absolute;
+    margin-top:19px;
+    margin-left: 20px;
+    z-index: 1;
+    color:white;
+
+}
+
+.bg-dark-trs{
+    background-color: rgba(30,30,30,.9);
+}
+
+
+
+.btn-green{
+
+    background-color: var(--header-color)
+
+}
+
+.btn-academia{
+    width: 182px;
+    height: 55px;
+    margin-bottom: 10px;
+    border:none;
+    border-radius: 25px;
+    font-family: 'Montserrat medium';
+    font-size: 20px;
+    transition: 0.3s;
+    color:white;
+
+    
+}
+
+.btn-white{
+   border:1px solid white;
+   background-color: rgba(30, 30, 30, 0);
+    
+}
+
+.main-banner{
+   padding-top: 50px;
+    margin-top:200px;
+    width: 1920px;
+    height: 385px;
+
+
+}
+
+
+.btn-white:hover{
+    background-color:white;
+    color:black;
+    
+}
+
+.row-main{
+    padding-bottom: 400px;
+}
+
+.underline-black{
+    background-color: #3D3838;
+    width:80%;
+    height: 21px;
+    margin:auto;
+}
+
+.content{
+    width: 840px;
+    height: 808px;
+    font-family: "Montserrat medium";
+    font-size:30px;
+    overflow: auto;
+}
+
+.row-space{
+
+    padding:100px 30px 100px 30px;
+}
+
+ .trailer-section{
+    padding:100px 0px 100px ;
+    background-color:var(--header-color);
+    width: 1917px;
+    max-width: 1917px;
+    
+}
+
+video{
+    
+    width: 100%;
+    height: auto;
+
+}
+
+
+
+
+.btn-static-search{
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    background-color:#12A956;
+    z-index: 10;
+    border:none;
+    color:white;
+    font-size:1rem;
+    transition:.5s;
+    position:fixed;
+    bottom:20px;
+    right: 20px;
+    visibility: hidden;
+}
+
+
+.show{
+    visibility: visible;
+    transition: .5s;
+}
+
+
+
+
+.footer{
+  background-color: #343030;
+}
+
+.icon{
+    margin:0 5px 0 5px;
+}
+
+.headbang-img{
+    width: 10%;
+    padding-bottom:60px;
+}
