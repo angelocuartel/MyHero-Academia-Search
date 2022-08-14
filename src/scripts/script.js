@@ -4,6 +4,11 @@
    const search = document.querySelector("#search-text");
    const resultContainer = document.querySelector('#search-result-container'); 
 
+// pull our heroes from rapid api after DOM is successfully loaded
+document.addEventListener("DOMContentLoaded",() => {
+    requestApi();
+})
+
 const showCurrentInnerHeight = () => {
     changeNavColor();
    if(window.scrollY >= 395){
@@ -35,4 +40,6 @@ const changeNavColor = () => {
 const showSearchResult = element => {  
     resultContainer.style.display = element.value === undefined || element.value==='' ? "none":"block";
 } 
+
+
 
