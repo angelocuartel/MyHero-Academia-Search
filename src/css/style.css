@@ -22,6 +22,11 @@ height:1032px ;
     margin-top:275px;
 }
 
+#search-result-container{
+    display:none;
+    background-color: #101010;
+}
+
 .container-fluid .main-searchbar{
     padding: 15px 15px 15px 50px;
     border-radius: 60px;

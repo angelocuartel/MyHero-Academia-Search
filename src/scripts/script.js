@@ -2,6 +2,7 @@
    const staticBtn = document.querySelector(".btn-static-search");
    const poweredBy = document.querySelector("#poweredby-text");
    const search = document.querySelector("#search-text");
+   const resultContainer = document.querySelector('#search-result-container'); 
 
 const showCurrentInnerHeight = () => {
     changeNavColor();
@@ -30,3 +31,8 @@ const changeNavColor = () => {
     poweredBy.style.color = search.style.color= "black";
     }
 }
+
+const showSearchResult = element => {  
+    resultContainer.style.display = element.value === undefined || element.value==='' ? "none":"block";
+} 
+
