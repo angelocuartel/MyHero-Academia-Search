@@ -25,6 +25,10 @@ height:1032px ;
 #search-result-container{
     display:none;
     background-color: #101010;
+    text-align: left;
+    border-radius: 20px;
+    max-height: 500px;
+    overflow: auto;
 }
 
 .container-fluid .main-searchbar{
