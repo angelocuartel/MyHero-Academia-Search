@@ -7,10 +7,6 @@ const options = {
   }
 };
 
-const requestApi = () => {
-    axios.request(options).then(function (response) {
-        console.log(response.data);
-    }).catch(function (error) {
-        console.error(error);
-    });
+const requestApi = async () => {
+  return  await axios.request(options);
 }
