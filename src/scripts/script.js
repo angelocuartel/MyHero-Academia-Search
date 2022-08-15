@@ -2,11 +2,13 @@
    const staticBtn = document.querySelector(".btn-static-search");
    const poweredBy = document.querySelector("#poweredby-text");
    const search = document.querySelector("#search-text");
-   const resultContainer = document.querySelector('#search-result-container'); 
+   const resultContainer = document.querySelector('#search-result-container');
+   var heroList = {}; 
 
 // pull our heroes from rapid api after DOM is successfully loaded
-document.addEventListener("DOMContentLoaded",() => {
-    requestApi();
+document.addEventListener("DOMContentLoaded", async () => {
+    heroList = await requestApi();
+    console.log(heroList.data);
 })
 
 const showCurrentInnerHeight = () => {
@@ -38,7 +40,36 @@ const changeNavColor = () => {
 }
 
 const showSearchResult = element => {  
-    resultContainer.style.display = element.value === undefined || element.value==='' ? "none":"block";
+    const filteredHeroes = heroList.data.filter(i => i.name.toLowerCase().includes(element.value.toLowerCase()));
+
+    resultContainer.innerHTML ='';
+    resultContainer.style.display = element.value === null || element.value==="" || filteredHeroes.length == 0 ? "none":"block";
+
+    for(let hero of filteredHeroes){
+
+        //avatar
+        let heroImage = document.createElement("img");
+        heroImage.src = hero.avatar.slice(0, hero.avatar.lastIndexOf('.'))+".png";
+        heroImage.width = "40";
+        heroImage.height ="40";
+        heroImage.objectFit = "cover";
+
+        //name
+        let elementP = document.createElement("p");
+        elementP.textContent = hero.name;
+        elementP.style.color ="white";
+        elementP.style.marginLeft = "5";
+
+        let subDiv = document.createElement("div");
+        subDiv.appendChild(heroImage);
+        subDiv.appendChild(elementP);
+        subDiv.style.display ="flex";
+        subDiv.style.paddingBottom = "10";
+
+        resultContainer.append(subDiv);
+    }
+
+    
 } 
 
 
