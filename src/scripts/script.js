@@ -1,6 +1,5 @@
    const navBar = document.querySelector("nav");
    const staticBtn = document.querySelector(".btn-static-search");
-   const poweredBy = document.querySelector("#poweredby-text");
    const search = document.querySelector("#search-text");
    const resultContainer = document.querySelector('#search-result-container');
    var heroList = {}; 
@@ -31,11 +30,11 @@ const isVisible = element => {
 const changeNavColor = () => {
     if(window.scrollY >= 984){
         navBar.style.backgroundColor ="rgb(30,30,30)";
-        poweredBy.style.color=search.style.color= "white";
+        search.style.color ="white";
     }
     else{
     navBar.style.backgroundColor ="white";
-    poweredBy.style.color = search.style.color= "black";
+    search.style.color ="black";
     }
 }
 
