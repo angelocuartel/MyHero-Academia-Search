@@ -209,3 +209,9 @@ video{
     width: 10%;
     padding-bottom:60px;
 }
+
+
+.hover-effect:hover{
+    background-color: #303030;
+    transition: .3s;
+}
