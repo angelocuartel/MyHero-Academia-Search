@@ -65,12 +65,22 @@ const showSearchResult = element => {
         subDiv.appendChild(elementP);
         subDiv.style.display ="flex";
         subDiv.style.paddingBottom = "10";
+        subDiv.style.cursor ="pointer"; 
+        subDiv.classList.add('hover-effect');
+        subDiv.classList.add("heroItem");
+        subDiv.id = hero.wiki;
+        subDiv.addEventListener("click",redirectToWiki,false);
 
         resultContainer.append(subDiv);
     }
 
-    
-} 
+}
+
+
+const redirectToWiki = event => {
+    window.open(event.target.id,'_blank');
+    document.querySelector(".main-searchbar").value ="";
+}
 
 
 
