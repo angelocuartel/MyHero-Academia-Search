@@ -12,10 +12,8 @@
 
 .main-background{
 background:url("/src/files/background.jpg") ;
-background-position: center;
-background-size: cover;
-width: 2446px;
 height:1032px ;
+object-fit: cover;
 }
 
 .main-page-search-container{
