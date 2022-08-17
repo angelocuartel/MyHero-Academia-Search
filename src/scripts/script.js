@@ -7,7 +7,6 @@
 // pull our heroes from rapid api after DOM is successfully loaded
 document.addEventListener("DOMContentLoaded", async () => {
     heroList = await requestApi();
-    console.log(heroList.data);
 })
 
 const showCurrentInnerHeight = () => {
