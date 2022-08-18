@@ -51,10 +51,10 @@ input:focus{
 
 header{
     position: fixed;
-    top:10;
+    top:15;
     left:20;
     z-index: 111;
-    font-size: 20;
+    font-size: 15px;
     font-weight: bolder;
     color:white;
 }
@@ -181,8 +181,8 @@ video{
     font-size:1rem;
     transition:.5s;
     position:fixed;
-    bottom:20px;
-    right: 20px;
+    bottom:20;
+    right: 20;
     visibility: hidden;
 }
 
