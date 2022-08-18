@@ -32,7 +32,7 @@ object-fit: cover;
 .container-fluid .main-searchbar{
     padding: 15px 15px 15px 50px;
     border-radius: 60px;
-    width: 40vw;
+    width: 40vh;
     height: auto;
     background-color: #101010;
     color:white;
@@ -212,4 +212,10 @@ video{
 .hover-effect:hover{
     background-color: #303030;
     transition: .3s;
+}
+
+@media screen and (width:280px) {
+    .container-fluid .main-searchbar{
+        width: 30vh;
+    }
 }
