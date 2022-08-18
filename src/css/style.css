@@ -27,6 +27,7 @@ object-fit: cover;
     border-radius: 20px;
     max-height: 500px;
     overflow: auto;
+    max-width: 500px;
 }
 
 .container-fluid .main-searchbar{
@@ -204,7 +205,7 @@ video{
 }
 
 .headbang-img{
-    width: 10%;
+    width: 10vh;
     padding-bottom:60px;
 }
 
@@ -214,8 +215,12 @@ video{
     transition: .3s;
 }
 
+
 @media screen and (width:280px) {
     .container-fluid .main-searchbar{
-        width: 30vh;
+        width: 100%;
+    }
+    #search-result-container{
+        width: 100%;
     }
 }
