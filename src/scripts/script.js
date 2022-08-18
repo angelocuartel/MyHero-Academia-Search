@@ -51,12 +51,17 @@ const showSearchResult = element => {
         heroImage.width = "40";
         heroImage.height ="40";
         heroImage.objectFit = "cover";
+        heroImage.id = hero.wiki;
+        heroImage.addEventListener("click",redirectToWiki,false);
+        
 
         //name
         let elementP = document.createElement("p");
         elementP.textContent = hero.name;
         elementP.style.color ="white";
         elementP.style.marginLeft = "5";
+        elementP.id = hero.wiki;
+        elementP.addEventListener("click",redirectToWiki,false);
 
         let subDiv = document.createElement("div");
         subDiv.appendChild(heroImage);
