@@ -39,12 +39,16 @@ const changeNavColor = () => {
 
 const showSearchResult = element => {  
     const filteredHeroes = heroList.data.filter(i => i.name.toLowerCase().includes(element.value.toLowerCase()));
+    let tempCharList =[];
 
     resultContainer.innerHTML ='';
     resultContainer.style.display = element.value === null || element.value==="" || filteredHeroes.length == 0 ? "none":"block";
 
     for(let hero of filteredHeroes){
 
+        const heroExist = tempCharList.filter(i => i.toLowerCase() === hero.name.toLowerCase()).length > 0 ;
+
+        if(!heroExist){
         //avatar
         let heroImage = document.createElement("img");
         heroImage.src = hero.avatar.slice(0, hero.avatar.lastIndexOf('.'))+".png";
@@ -75,6 +79,9 @@ const showSearchResult = element => {
         subDiv.addEventListener("click",redirectToWiki,false);
 
         resultContainer.append(subDiv);
+        tempCharList.push(hero.name);
+
+        }
     }
 
 }
