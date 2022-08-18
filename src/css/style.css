@@ -15,6 +15,7 @@
 background:url("/src/files/background.jpg") ;
 height:1032px ;
 object-fit: cover;
+background-position: center;
 }
 
 .main-page-search-container{
