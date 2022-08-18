@@ -39,24 +39,33 @@ const changeNavColor = () => {
 
 const showSearchResult = element => {  
     const filteredHeroes = heroList.data.filter(i => i.name.toLowerCase().includes(element.value.toLowerCase()));
+    let tempCharList =[];
 
     resultContainer.innerHTML ='';
     resultContainer.style.display = element.value === null || element.value==="" || filteredHeroes.length == 0 ? "none":"block";
 
     for(let hero of filteredHeroes){
 
+        const heroExist = tempCharList.filter(i => i.toLowerCase() === hero.name.toLowerCase()).length > 0 ;
+
+        if(!heroExist){
         //avatar
         let heroImage = document.createElement("img");
         heroImage.src = hero.avatar.slice(0, hero.avatar.lastIndexOf('.'))+".png";
         heroImage.width = "40";
         heroImage.height ="40";
         heroImage.objectFit = "cover";
+        heroImage.id = hero.wiki;
+        heroImage.addEventListener("click",redirectToWiki,false);
+        
 
         //name
         let elementP = document.createElement("p");
         elementP.textContent = hero.name;
         elementP.style.color ="white";
         elementP.style.marginLeft = "5";
+        elementP.id = hero.wiki;
+        elementP.addEventListener("click",redirectToWiki,false);
 
         let subDiv = document.createElement("div");
         subDiv.appendChild(heroImage);
@@ -70,6 +79,9 @@ const showSearchResult = element => {
         subDiv.addEventListener("click",redirectToWiki,false);
 
         resultContainer.append(subDiv);
+        tempCharList.push(hero.name);
+
+        }
     }
 
 }
