@@ -72,6 +72,7 @@ nav{
     background-color: white;
     height: 50px;
     transition: .6s;
+    z-index: 5;
 }
 
 .bi-search-main{
@@ -167,7 +168,6 @@ video{
     
     width: 100%;
     height: auto;
-
 }
 
 
